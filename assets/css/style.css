@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: bolder;
+}
+header a {
+  text-decoration: none;
+}
+
+.challenge-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+}
+
+.high-scores {
+  margin-left: 20px;
+  margin-top: 10px
+}
+
+.time {
+  margin-right : 100px;
+  margin-top: 10px;
+}
+
+.the-quiz {
+  text-align: center;
+  margin-top:30vh;
+}
+
+.the-quiz p {
+  font-size:25px;
+  margin-left: 8%;
+  margin-right: 8%;
+}
