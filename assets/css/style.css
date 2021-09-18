@@ -24,9 +24,16 @@ header a {
   margin-top: 10px
 }
 
-.time {
-  margin-right : 100px;
+.timer {
+  margin-right : 20px;
   margin-top: 10px;
+}
+.countdown {
+  margin-right: 20px;
+  margin-top: 10px;
+}
+.timer-container{
+  display: flex;
 }
 
 .the-quiz {
