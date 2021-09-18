@@ -1,7 +1,12 @@
+/* Global styles start */
 * {
   padding: 0;
   margin: 0;
   font-family: 'Lato', sans-serif; 
+}
+main {
+  width:65%;
+  margin: 0 auto;
 }
 
 h1 {
@@ -12,7 +17,9 @@ h1 {
 header a {
   text-decoration: none;
 }
+/* Global styles end */
 
+/* Header styles start */
 .challenge-details {
   display: flex;
   justify-content: space-between;
@@ -35,16 +42,16 @@ header a {
 .timer-container{
   display: flex;
 }
+/* Header styles end */
 
+/* Before start styles start */
 .the-quiz {
   text-align: center;
   margin-top:30vh;
 }
 
-.the-quiz p {
-  font-size:25px;
-  margin-left: 8%;
-  margin-right: 8%;
+.before-start p {
+  font-size:30px;
 }
 .start-button {
   background-color:	#4B0082;
@@ -54,3 +61,30 @@ header a {
   margin-top: 25px;
   color: white;
 }
+/* Before start styles end */
+
+/* Game play start */
+.quiz-play{
+  margin-top:30vh;
+}
+.question { 
+  font-size: 40px;
+
+}
+.answer-1, .answer-2, .answer-3, .answer-4 {
+  display: block;
+  background-color:	#4B0082;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-top: 25px;
+  color: white;
+}
+.question, .answers, .quiz-response {
+  text-align: left;
+}
+.quiz-response {
+  border-top: 1px solid black;
+  font-size: 30px;
+}
+/* Game play end */

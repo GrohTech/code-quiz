@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Code Quiz</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-  </head>
-  <body>
-    <header class="challenge-details" id="challenge-details">
-      <p class="high-scores"><a href="">View high scores</a></p>
-      <div class="timer-container">
-        <p class="timer">Time:</p>
-        <p class="countdown" id="countdown"></p>
-      </div>
-    </header>
-    <main class="the-quiz" id="the=quiz">
-      <div class="before-start">
-        <h1>Coding Quiz Challenge</h1>
-        <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
-        <button class="start-button" type="button">Start Quiz
-        </button>
-      </div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Code Quiz</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+  <header class="challenge-details" id="challenge-details">
+    <p class="high-scores"><a href="">View high scores</a></p>
+    <div class="timer-container">
+      <p class="timer">Time:</p>
+      <p class="countdown" id="countdown"></p>
+    </div>
+  </header>
+  <!-- Quiz intro-->
+  <main class="the-quiz" id="the=quiz">
+    <div class="before-start">
+      <h1>Coding Quiz Challenge</h1>
+      <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers
+        will penalize your score/time by ten seconds!</p>
+      <button class="start-button" type="button">Start Quiz
+      </button>
+    </div>
+
+    <!-- Actual quiz -->
+    <div class="quiz-play">
       <div class="question-1" id="question-1">
         <h2 class="question">Commonly used data types do not include:</h2>
         <div class="answers">
@@ -32,7 +39,7 @@
         </div>
       </div>
       <div class="question-2" id="question-2">
-        <h2 class="question">The condition in an if / else statement is enclosed with ___________.</h2>
+        <h2 class="question">The condition in an if / else statement is enclosed with __________.</h2>
         <div class="answers">
           <button class="answer-1">1. quotes</button>
           <button class="answer-2">2. curly brackets</button>
@@ -50,7 +57,7 @@
         </div>
       </div>
       <div class="question-4" id="question-4">
-        <h2 class="question">String values must be enclosed within ____________ when being assigned to variables.</h2>
+        <h2 class="question">String values must be enclosed within __________ when being assigned to variables.</h2>
         <div class="answers">
           <button class="answer-1">1. commas</button>
           <button class="answer-2">2. curly brackets</button>
@@ -59,7 +66,8 @@
         </div>
       </div>
       <div class="question-5" id="question-5">
-        <h2 class="question">A very useful tool used during development and debugging for printing conent to the debugger is:</h2>
+        <h2 class="question">A very useful tool used during development and debugging for printing conent to the debugger
+          is:</h2>
         <div class="answers">
           <button class="answer-1">1. JavaScript</button>
           <button class="answer-2">2. terminal/bash</button>
@@ -67,7 +75,15 @@
           <button class="answer-4">4. console.log</button>
         </div>
       </div>
-    </main>
-	<script src="./assets/js/index.js"></script>
-  </body>
+    </div>
+
+    <div class="quiz-response">
+        <p id="correct">Correct!</p>      
+        <p id="wrong">Wrong!</p> 
+    </div>     
+  </div>
+  </main>
+  <script src="./assets/js/index.js"></script>
+</body>
+
 </html>
