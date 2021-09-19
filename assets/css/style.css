@@ -14,8 +14,23 @@ h1 {
   font-weight: bolder;
   margin-bottom: 25px;
 }
+h2 {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+p {
+  font-size: 30px;
+}
 header a {
   text-decoration: none;
+}
+button {
+  background-color:	#4B0082;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-top: 25px;
+  color: white;
 }
 /* Global styles end */
 
@@ -44,46 +59,34 @@ header a {
 }
 /* Header styles end */
 
+
+/* Shared styles start */
+.the-quiz, .quiz-play,.game-over{
+  margin-top: 30vh;
+}
+/* Shared styles end */
+
+
 /* Before start styles start */
 .the-quiz {
   text-align: center;
-  margin-top:30vh;
-}
+}  
 
-.before-start p {
-  font-size:30px;
-}
 .start-button {
-  background-color:	#4B0082;
-  padding: 10px 15px;
-  font-size: 20px;
-  border-radius: 10px;
   margin-top: 25px;
-  color: white;
 }
 /* Before start styles end */
 
-/* Game play start */
-.quiz-play{
-  margin-top:30vh;
-}
-.question { 
-  font-size: 40px;
-
-}
-.answer-1, .answer-2, .answer-3, .answer-4 {
+/* Game play styles start */
+.answer-button {
   display: block;
-  background-color:	#4B0082;
-  padding: 10px 15px;
-  font-size: 20px;
-  border-radius: 10px;
   margin-top: 25px;
-  color: white;
+  
 }
-.question, .answers, .quiz-response {
+.question, .answers, .quiz-response, .game-over {
   text-align: left;
 }
-.quiz-response {
+.quiz-response-correct, .quiz-response-wrong {
   border-top: 2px solid #CDCDCD;
   font-size: 25px;
   font-weight: 100;
@@ -91,7 +94,12 @@ header a {
   display: none;
 }
 
-.question-1, .question-2, .question-3, .question-4, .question-5 {
+.question-1, .question-2, .question-3, .question-4, .question-5, .game-over {
   display: none;
+
+input {
+  padding: 10px;
+  width: 100px;
 }
-/* Game play end */
+
+/* Game play styles end */
