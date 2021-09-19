@@ -19,11 +19,11 @@
   </header>
   <!-- Quiz intro-->
   <main class="the-quiz" id="the=quiz">
-    <div class="before-start">
+    <div class="before-start" id="before-start">
       <h1>Coding Quiz Challenge</h1>
       <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers
         will penalize your score/time by ten seconds!</p>
-      <button class="start-button" type="button">Start Quiz
+      <button class="start-button" id="start-button" type="button">Start Quiz
       </button>
     </div>
 
@@ -31,48 +31,48 @@
     <div class="quiz-play">
       <div class="question-1" id="question-1">
         <h2 class="question">Commonly used data types do not include:</h2>
-        <div class="answers">
-          <button class="answer-1">1. strings</button>
-          <button class="answer-2">2. booleans</button>
-          <button class="answer-3">3. alerts</button>
-          <button class="answer-4">4. numbers</button>
+        <div class="answers" id="q1-answers">
+          <button class="answer-1" type="button">1. strings</button>
+          <button class="answer-2" type="button">2. booleans</button>
+          <button class="answer-3" type="button" id="q1-correct">3. alerts</button>
+          <button class="answer-4" type="button">4. numbers</button>
         </div>
       </div>
       <div class="question-2" id="question-2">
         <h2 class="question">The condition in an if / else statement is enclosed with __________.</h2>
-        <div class="answers">
-          <button class="answer-1">1. quotes</button>
-          <button class="answer-2">2. curly brackets</button>
-          <button class="answer-3">3. parenthesis</button>
-          <button class="answer-4">4. square brackets</button>
+        <div class="answers" id="q2-answers">
+          <button class="answer-1" type="button">1. quotes</button>
+          <button class="answer-2" type="button">2. curly brackets</button>
+          <button class="answer-3" type="button" id="q2-correct">3. parenthesis</button>
+          <button class="answer-4" type="button">4. square brackets</button>
         </div>
       </div>
       <div class="question-3" id="question-3">
         <h2 class="question">Arrays in JavaScript can be used to store __________.</h2>
-        <div class="answers">
-          <button class="answer-1">1. numbers and strings</button>
-          <button class="answer-2">2. other arrays</button>
-          <button class="answer-3">3. booleans</button>
-          <button class="answer-4">4. all of the above</button>
+        <div class="answers" id="q3-answers">
+          <button class="answer-1" type="button">1. numbers and strings</button>
+          <button class="answer-2" type="button">2. other arrays</button>
+          <button class="answer-3" type="button">3. booleans</button>
+          <button class="answer-4" type="button" id="q3-correct">4. all of the above</button>
         </div>
       </div>
       <div class="question-4" id="question-4">
         <h2 class="question">String values must be enclosed within __________ when being assigned to variables.</h2>
-        <div class="answers">
-          <button class="answer-1">1. commas</button>
-          <button class="answer-2">2. curly brackets</button>
-          <button class="answer-3">3. quotes</button>
-          <button class="answer-4">4. parenthesis</button>
+        <div class="answers" id="q4-answers">
+          <button class="answer-1" type="button">1. commas</button>
+          <button class="answer-2" type="button">2. curly brackets</button>
+          <button class="answer-3" type="button" id="q4-correct">3. quotes</button>
+          <button class="answer-4" type="button">4. parenthesis</button>
         </div>
       </div>
       <div class="question-5" id="question-5">
         <h2 class="question">A very useful tool used during development and debugging for printing conent to the debugger
           is:</h2>
-        <div class="answers">
-          <button class="answer-1">1. JavaScript</button>
-          <button class="answer-2">2. terminal/bash</button>
-          <button class="answer-3">3. for loops</button>
-          <button class="answer-4">4. console.log</button>
+        <div class="answers" id="q5-answers">
+          <button class="answer-1" type="button">1. JavaScript</button>
+          <button class="answer-2" type="button">2. terminal/bash</button>
+          <button class="answer-3" type="button">3. for loops</button>
+          <button class="answer-4" type="button" id="q5-correct">4. console.log</button>
         </div>
       </div>
     </div>
@@ -83,7 +83,7 @@
     </div>     
   </div>
   </main>
-  <script src="./assets/js/index.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
