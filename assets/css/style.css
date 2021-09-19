@@ -83,15 +83,8 @@ button {
   margin-top: 25px;
   
 }
-.question, .answers, .quiz-response, .game-over {
+.question, .answers, .game-over {
   text-align: left;
-}
-.quiz-response-correct, .quiz-response-wrong {
-  border-top: 2px solid #CDCDCD;
-  font-size: 25px;
-  font-weight: 100;
-  color: #CDCDCD;
-  display: none;
 }
 
 .question-1, .question-2, .question-3, .question-4, .question-5, .game-over {
