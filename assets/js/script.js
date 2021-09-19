@@ -36,6 +36,7 @@ function startQuestion1(event) {
         wrong.style.display = "block";
         //subtract 10 seconds
     }
+    delay();
     correct.style.display = "none";
     wrong.style.display = "none";
     question1.style.display = "none";
@@ -44,9 +45,9 @@ function startQuestion1(event) {
 };
 document.querySelector("#q2-answers").addEventListener("click", startQuestion2)
 
-function startQuestion2() {
+function startQuestion2(event) {
     // When user correctly answers a question, "Correct!" appears at the bottom of the screen
-    if (event.target = document.querySelector("#q2-correct")) {
+    if (event.target.id) {
         correct.style.display = "block";
     }
     // When user incorrectly answers a question, "Wrong!" appears at the bottome of the screen and 10 seconds is removed from the timer countdown.
@@ -54,15 +55,18 @@ function startQuestion2() {
         wrong.style.display = "block";
         //subtract 10 seconds
     }
+    delay();
+    correct.style.display = "none";
+    wrong.style.display = "none";
     question2.style.display = "none";
     question3.style.display = "block";
     return;
 };
 document.querySelector("#q3-answers").addEventListener("click", startQuestion3)
 
-function startQuestion3() {
+function startQuestion3(event) {
     // When user correctly answers a question, "Correct!" appears at the bottom of the screen
-    if (event.target = document.querySelector("#q3-correct")) {
+    if (event.target.id) {
         correct.style.display = "block";
     }
     // When user incorrectly answers a question, "Wrong!" appears at the bottome of the screen and 10 seconds is removed from the timer countdown.
@@ -70,15 +74,18 @@ function startQuestion3() {
         wrong.style.display = "block";
         //subtract 10 seconds
     }
+    delay();
+    correct.style.display = "none";
+    wrong.style.display = "none";
     question3.style.display = "none";
     question4.style.display = "block";
     return;
 };
 document.querySelector("#q4-answers").addEventListener("click", startQuestion4)
 
-function startQuestion4() {
+function startQuestion4(event) {
     // When user correctly answers a question, "Correct!" appears at the bottom of the screen
-    if (event.target = document.querySelector("#q4-correct")) {
+    if (event.target.id) {
         correct.style.display = "block";
     }
     // When user incorrectly answers a question, "Wrong!" appears at the bottome of the screen and 10 seconds is removed from the timer countdown.
@@ -86,15 +93,18 @@ function startQuestion4() {
         wrong.style.display = "block";
         //subtract 10 seconds
     }
+    delay();
+    correct.style.display = "none";
+    wrong.style.display = "none";
     question4.style.display = "none";
     question5.style.display = "block";
     return;
 };
 document.querySelector("#q5-answers").addEventListener("click", startQuestion5)
 
-function startQuestion5() {
+function startQuestion5(event) {
     // When user correctly answers a question, "Correct!" appears at the bottom of the screen
-    if (event.target = document.querySelector("#q5-correct")) {
+    if (event.target.id) {
         correct.style.display = "block";
     }
     // When user incorrectly answers a question, "Wrong!" appears at the bottome of the screen and 10 seconds is removed from the timer countdown.
@@ -103,6 +113,9 @@ function startQuestion5() {
         //subtract 10 seconds
     }
     //After user answers final question "All done!" appears, as well as the final score and an option to enter initials.
+    delay();
+    correct.style.display = "none";
+    wrong.style.display = "none";
     question5.style.display = "none";
     gameOver.style.display = "block";
     return;
@@ -139,5 +152,14 @@ function countdown() {
 
     }, 1000);
 };
+
+var i = 3;
+
+function delay() {
+    setTimeout(function(){
+    i--;
+    if (i=0) {
+    clearTimeout}
+}, 3000)};
 
 // When timer gets to zero and/or when user answers final question (.length of question array), clearInterval
