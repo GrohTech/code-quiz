@@ -16,7 +16,7 @@ h1 {
 }
 h2 {
   font-size: 40px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 p {
   font-size: 30px;
@@ -31,6 +31,17 @@ button {
   border-radius: 10px;
   margin-top: 25px;
   color: white;
+}
+
+input {
+  font-size: 20px;
+  width: 50%;
+  padding: 10px;
+  margin-right: 10px;
+}
+label {
+  font-size: 20px;
+  margin-right: 10px;
 }
 /* Global styles end */
 
@@ -61,7 +72,7 @@ button {
 
 
 /* Shared styles start */
-.the-quiz, .quiz-play,.game-over{
+.the-quiz, .quiz-play,.game-over, #high-scores{
   margin-top: 30vh;
 }
 /* Shared styles end */
@@ -81,18 +92,17 @@ button {
 .answer-button {
   display: block;
   margin-top: 25px;
-  
 }
-.question, .answers, .game-over {
+
+.question, .answers, .game-over, .high-scores {
   text-align: left;
 }
 
-.question-1, .question-2, .question-3, .question-4, .question-5, .game-over {
+.question-1, .question-2, .question-3, .question-4, .question-5, .game-over, #high-scores {
   display: none;
-
-input {
-  padding: 10px;
-  width: 100px;
 }
 
+#high-scores h2 {
+  margin-bottom: 0px;
+}
 /* Game play styles end */

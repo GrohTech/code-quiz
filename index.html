@@ -78,11 +78,19 @@
       </div>
       <div class="game-over" id="game-over">
         <h2>All done!</h2>
-        <p>Your final score is</p>
+        <p>Your final score =</p>
+        <p id="final-score"></p>
         <form>
           <label for="enter-initials">Enter initials:</label>
           <input type="text" id="initials-entered" name="initials-entered">
           <button class="initial-submit" type="button">Submit</button>
+        </form>
+      </div>
+      <div id="high-scores">
+        <h2>High Scores</h2>
+        <form id="high-scores-input">
+          <input type="text" id="initials-score" name="initials-score">
+          <button class="back" type="button">Go Back</button>
         </form>
       </div>
     </div>

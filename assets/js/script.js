@@ -9,6 +9,10 @@ var question5 = document.querySelector("#question-5");
 var correct = document.querySelector(".quiz-response-correct");
 var wrong = document.querySelector(".quiz-response-wrong");
 var gameOver = document.querySelector("#game-over");
+var timeLeft = 90;
+var finalScore = document.querySelector("#final-score");
+var highScoresLink = document.querySelector(".high-scores");
+var highScores = document.querySelector("#high-scores");
 
 // When user presses start, the timer starts and the first quiz question appears
 startBtn.addEventListener("click", startQuiz)
@@ -35,6 +39,7 @@ function startQuestion1(event) {
     // When user incorrectly answers a question, "Wrong!" appears at the bottome of the screen and 10 seconds is removed from the timer countdown.
     else {
         alert("Wrong!");
+        event.stopPropagation();
         timeLeft = timeLeft - 10;
         //timerEl.innerHTML = timeLeft - 10;
         //wrong.style.display = "block";
@@ -58,6 +63,7 @@ function startQuestion2(event) {
     else {
         alert("Wrong!");
         event.stopPropagation();
+        timeLeft = timeLeft - 10;
     }
     question2.style.display = "none";
     question3.style.display = "block";
@@ -75,6 +81,7 @@ function startQuestion3(event) {
     else {
         alert("Wrong!");
         event.stopPropagation();
+        timeLeft = timeLeft - 10;
     }
     question3.style.display = "none";
     question4.style.display = "block";
@@ -92,6 +99,7 @@ function startQuestion4(event) {
     else {
         alert("Wrong!");
         event.stopPropagation();
+        timeLeft = timeLeft - 10;
     }
     question4.style.display = "none";
     question5.style.display = "block";
@@ -109,6 +117,7 @@ function startQuestion5(event) {
     else {
         alert("Wrong!");
         event.stopPropagation();
+        timeLeft = timeLeft - 10;
     }
     //After user answers final question "All done!" appears, as well as the final score and an option to enter initials.
     question5.style.display = "none";
@@ -116,24 +125,18 @@ function startQuestion5(event) {
     return;
 };
 
-// function gameOver(){
-//     // When user correctly answers a question, "Correct!" appears at the bottom of the screen
-//     if (event.target = document.querySelector("#q5-correct")){
-//         correct.style.display = "block";
-//     }
-//     // When user incorrectly answers a question, "Wrong!" appears at the bottome of the screen and 10 seconds is removed from the timer countdown.
-//     else {
-//         wrong.style.display = "block";
-//         //subtract 10 seconds
-//     }
-//     //After user answers final question "All done!" appears, as well as the final score and an option to enter initials.
-//     question5.style.display = "none";
-//     return;
-// };
+function endGame() {
+    finalScore.innterHTML = timeLeft;
+}
 
+highScoresLink.addEventListener("click", clickHighScores())
+function clickHighScores(event) {
+    if (event.target.highScoresLink){
+    highScores.style.display = "block";
+    }
+}
 
 function countdown() {
-    var timeLeft = 90;
 
     // Timer is set to count down one second at a time
     var timeInterval = setInterval(function(){
