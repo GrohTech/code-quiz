@@ -1,4 +1,5 @@
 var timerEl = document.querySelector("#countdown");
+var timeLeft = 90;
 var startBtn = document.querySelector("#start-button");
 var question1 = document.querySelector("#question-1");
 var question2 = document.querySelector("#question-2");
@@ -34,6 +35,8 @@ function startQuestion1(event) {
     // When user incorrectly answers a question, "Wrong!" appears at the bottome of the screen and 10 seconds is removed from the timer countdown.
     else {
         alert("Wrong!");
+        timeLeft = timeLeft - 10;
+        //timerEl.innerHTML = timeLeft - 10;
         //wrong.style.display = "block";
         //subtract 10 seconds
     }
@@ -138,8 +141,9 @@ function countdown() {
 
         timerEl.innerHTML =
             timeLeft--;
-        if (timeLeft == 0) {
-            clearInterval();
+        if (timeLeft === 0) {
+            timerEl.textContent = '0';
+            clearInterval(timeInterval);
             // Run gameOver function
         } 
     }, 1000);
