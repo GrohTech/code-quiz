@@ -18,6 +18,8 @@ var finalScore = document.querySelector("#final-score");
 var highScoresLink = document.querySelector(".high-scores");
 var highScores = document.querySelector("#high-scores");
 var runningScore = 0
+var initialsEntered = document.querySelector("#initials-entered")
+var initiailsSubmit = document.querySelector(".initials-submit");
 
 
 // When user presses start, the timer starts and the first quiz question appears
@@ -140,16 +142,46 @@ function startQuestion5(event) {
 
 // Game ends and final score appears
 function endGame() {
-    finalScore.innterHTML = runningScore + timeLeft;
+    finalScore.innerHTML = runningScore + timeLeft;
 }
 
-// // If user clicks "high scores", they are displayed 
-// highScoresLink.addEventListener("click", clickHighScores())
-// function clickHighScores(event) {
-//     if (event.target.highScoresLink) {
-//         highScores.style.display = "block";
-//     }
-// }
+function renderLastRegistered(){
+    // Retrieve last initials and high score from local storage
+    var initialsEntered = localStorage.getItem('initials');
+    var finalScore = localStorage.getItem('score');
+
+    // Set text of 
+    initialsEntered.textContent = storedInitials;
+    finalScore.textContent = storedScore;
+}
+
+
+// If user clicks "high scores", they are displayed 
+highScoresLink.addEventListener("click", clickHighScores())
+function clickHighScores(event) {
+    if (event.target.highScoresLink) {
+        highScores.style.display = "block";
+    }
+}
+
+
+// User is asked to input initials
+initiailsSubmit.addEventListener('click', function(event) {
+    var initialsEntered = document.querySelector("#initials-entered").value;
+    var finalScore = document.querySelector("#final-score").value;
+
+    if (initialsEntered === '') {
+        alert("Initials cannot be blank");
+        endGame();
+    }
+    else {
+        alert("Success!");
+    // Initials and score are saved to localStorage
+    localStorage.setItem('initials', initialsEntered);
+    localStorage.setItem('score', finalScore);
+    renderLastRegistered();
+    }
+});
 
 function countdown() {
 
