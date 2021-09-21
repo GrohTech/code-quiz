@@ -3,6 +3,7 @@ var timerEl = document.querySelector("#countdown");
 var timeLeft = 90;
 
 // Game play variables
+var beforeStart = document.querySelector("#before-start");
 var startBtn = document.querySelector("#start-button");
 var question1 = document.querySelector("#question-1");
 var question2 = document.querySelector("#question-2");
@@ -18,8 +19,12 @@ var finalScore = document.querySelector("#final-score");
 var highScoresLink = document.querySelector(".high-scores");
 var highScores = document.querySelector("#high-scores");
 var runningScore = 0
-var initialsEntered = document.querySelector("#initials-entered")
+var hsScore = document.querySelector("#hs-score");
+var tryAgain = document.querySelector(".try-again");
+
+//var initialsEntered = document.querySelector("#initials-entered")
 var initiailsSubmit = document.querySelector(".initials-submit");
+var hsInitials = document.querySelector("#hs-initials");
 
 
 // When user presses start, the timer starts and the first quiz question appears
@@ -35,7 +40,6 @@ function startQuiz() {
 // Question 1 appears
 function startQuestion1(event) {
     // When user correctly answers a question, "Correct!" appears at the bottom of the screen
-    console.log(event);
     if (event.target.id) {
         alert("Correct!");
         runningScore += 1
@@ -147,41 +151,55 @@ function endGame() {
 
 function renderLastRegistered(){
     // Retrieve last initials and high score from local storage
-    var initialsEntered = localStorage.getItem('initials');
-    var finalScore = localStorage.getItem('score');
+    var storedInitials = localStorage.getItem('initials');
+    var storedScore = localStorage.getItem('score');
 
     // Set text of 
-    initialsEntered.textContent = storedInitials;
-    finalScore.textContent = storedScore;
+    hsInitials.textContent = storedInitials;
+    hsScore.textContent = storedScore;
 }
 
+renderLastRegistered();
 
-// If user clicks "high scores", they are displayed 
-highScoresLink.addEventListener("click", clickHighScores())
-function clickHighScores(event) {
-    if (event.target.highScoresLink) {
-        highScores.style.display = "block";
-    }
-}
+// // If user clicks "high scores", they are displayed 
+// highScoresLink.addEventListener("click", clickHighScores())
+// function clickHighScores(event) {
+//     if (event.target.highScoresLink) {
+//         highScores.style.display = "block";
+//     }
+// }
 
 
 // User is asked to input initials
 initiailsSubmit.addEventListener('click', function(event) {
+    event.preventDefault();
+
     var initialsEntered = document.querySelector("#initials-entered").value;
-    var finalScore = document.querySelector("#final-score").value;
+    var score = document.querySelector("#final-score").value;
 
     if (initialsEntered === '') {
         alert("Initials cannot be blank");
         endGame();
     }
     else {
-        alert("Success!");
     // Initials and score are saved to localStorage
     localStorage.setItem('initials', initialsEntered);
-    localStorage.setItem('score', finalScore);
+    localStorage.setItem('score', score);
+
+    // High scores will appear
+    gameOver.style.display = "none";
+    highScores.style.display = "block";
     renderLastRegistered();
+
+    tryAgain.addEventListener('click', playAgain());
     }
 });
+console.log(localStorage);
+
+function playAgain() {
+    highScores.style.display = "none";
+    beforeStart.style.display = "block";
+};
 
 function countdown() {
 
@@ -195,6 +213,7 @@ function countdown() {
             timerEl.textContent = '0';
             clearInterval(timeInterval);
             // Run gameOver function
+            endGame();
         }
     }, 1000);
 };
