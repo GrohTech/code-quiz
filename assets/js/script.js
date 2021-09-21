@@ -23,7 +23,7 @@ var hsScore = document.querySelector("#hs-score");
 var tryAgain = document.querySelector(".try-again");
 
 //var initialsEntered = document.querySelector("#initials-entered")
-var initiailsSubmit = document.querySelector(".initials-submit");
+var initialsSubmit = document.querySelector(".initials-submit");
 var hsInitials = document.querySelector("#hs-initials");
 
 
@@ -49,9 +49,6 @@ function startQuestion1(event) {
         alert("Wrong!");
         event.stopPropagation();
         timeLeft = timeLeft - 10;
-        //timerEl.innerHTML = timeLeft - 10;
-        //wrong.style.display = "block";
-        //subtract 10 seconds
     }
     question1.style.display = "none";
     question2.style.display = "block";
@@ -66,7 +63,6 @@ function startQuestion2(event) {
         alert("Correct!");
         event.stopPropagation();
         runningScore += 1
-        //correct.style.display = "block";
 
     }
     // When user incorrectly answers a question, "Wrong!" appears at the bottome of the screen and 10 seconds is removed from the timer countdown.
@@ -147,6 +143,7 @@ function startQuestion5(event) {
 // Game ends and final score appears
 function endGame() {
     finalScore.innerHTML = runningScore + timeLeft;
+    return;
 }
 
 function renderLastRegistered(){
@@ -161,17 +158,9 @@ function renderLastRegistered(){
 
 renderLastRegistered();
 
-// // If user clicks "high scores", they are displayed 
-// highScoresLink.addEventListener("click", clickHighScores())
-// function clickHighScores(event) {
-//     if (event.target.highScoresLink) {
-//         highScores.style.display = "block";
-//     }
-// }
-
 
 // User is asked to input initials
-initiailsSubmit.addEventListener('click', function(event) {
+initialsSubmit.addEventListener('click', function(event) {
     event.preventDefault();
 
     var initialsEntered = document.querySelector("#initials-entered").value;
@@ -191,15 +180,13 @@ initiailsSubmit.addEventListener('click', function(event) {
     highScores.style.display = "block";
     renderLastRegistered();
 
-    tryAgain.addEventListener('click', playAgain());
+    tryAgain.addEventListener('click', function(event){
+        highScores.style.display = "none";
+        beforeStart.style.display = "block";
+    });
     }
 });
 console.log(localStorage);
-
-function playAgain() {
-    highScores.style.display = "none";
-    beforeStart.style.display = "block";
-};
 
 function countdown() {
 
