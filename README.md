@@ -28,7 +28,7 @@ Code Quiz is a very self-explanatory quiz about coding. There are basic question
 7. User can click "Try Again" to play another round.
 
 
-**View the application, here:** [Password Generator](https://grohtech.github.io/Password-Generator/ "Password Generator")
+**View the application, here:** [Code Quiz](https://grohtech.github.io/code-quiz/ "Code Quiz")
 
 **View website screenshots, here:**  
 ![Code Quiz - 1](./assets/images/code-quiz-1.png "Code Quiz - 1")
