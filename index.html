@@ -35,7 +35,7 @@
           <button onclick="startQuestion1(event)" class="answer-button" type="button">1. strings</button>
           <button onclick="startQuestion1(event)" class="answer-button" type="button">2. booleans</button>
           <button onclick="startQuestion1(event)" class="answer-button" type="button" id="q1-correct">3. alerts</button>
-          <button onclick="startQuestion1(event)"class="answer-button" type="button">4. numbers</button>
+          <button onclick="startQuestion1(event)" class="answer-button" type="button">4. numbers</button>
         </div>
       </div>
       <div class="question-2" id="question-2">
@@ -43,7 +43,8 @@
         <div class="answers" id="q2-answers">
           <button onclick="startQuestion2(event)" class="answer-button" type="button">1. quotes</button>
           <button onclick="startQuestion2(event)" class="answer-button" type="button">2. curly brackets</button>
-          <button onclick="startQuestion2(event)" class="answer-button" type="button" id="q2-correct">3. parenthesis</button>
+          <button onclick="startQuestion2(event)" class="answer-button" type="button" id="q2-correct">3.
+            parenthesis</button>
           <button onclick="startQuestion2(event)" class="answer-button" type="button">4. square brackets</button>
         </div>
       </div>
@@ -53,14 +54,15 @@
           <button onclick="startQuestion3(event)" class="answer-button" type="button">1. numbers and strings</button>
           <button onclick="startQuestion3(event)" class="answer-button" type="button">2. other arrays</button>
           <button onclick="startQuestion3(event)" class="answer-button" type="button">3. booleans</button>
-          <button onclick="startQuestion3(event)" class="answer-button" type="button" id="q3-correct">4. all of the above</button>
+          <button onclick="startQuestion3(event)" class="answer-button" type="button" id="q3-correct">4. all of the
+            above</button>
         </div>
       </div>
       <div class="question-4" id="question-4">
         <h2 class="question">String values must be enclosed within __________ when being assigned to variables.</h2>
         <div class="answers" id="q4-answers">
           <button onclick="startQuestion4(event)" class="answer-button" type="button">1. commas</button>
-          <button onclick="startQuestion4(event)"class="answer-button" type="button">2. curly brackets</button>
+          <button onclick="startQuestion4(event)" class="answer-button" type="button">2. curly brackets</button>
           <button onclick="startQuestion4(event)" class="answer-button" type="button" id="q4-correct">3. quotes</button>
           <button onclick="startQuestion4(event)" class="answer-button" type="button">4. parenthesis</button>
         </div>
@@ -73,13 +75,15 @@
           <button onclick="startQuestion5(event)" class="answer-button" type="button">1. JavaScript</button>
           <button onclick="startQuestion5(event)" class="answer-button" type="button">2. terminal/bash</button>
           <button onclick="startQuestion5(event)" class="answer-button" type="button">3. for loops</button>
-          <button onclick="startQuestion5(event)" class="answer-button" type="button" id="q5-correct">4. console.log</button>
+          <button onclick="startQuestion5(event)" class="answer-button" type="button" id="q5-correct">4.
+            console.log</button>
         </div>
       </div>
       <div class="game-over" id="game-over">
         <h2>All done!</h2>
-        <p>Your final score =</p>
+        <p id="final-score-label">Your final score =</p>
         <p id="final-score"></p>
+
         <form>
           <label for="enter-initials">Enter initials:</label>
           <input type="text" id="initials-entered" name="initials-entered">
@@ -88,8 +92,16 @@
       </div>
       <div id="high-scores">
         <h2>High Scores</h2>
-        <p id="hs-initials"></p>
-        <p id="hs-score"></p>
+        <div class="hs-container">
+          <div class="initials-container">
+            <p id="initials-label">Initials:</p>
+            <p id="hs-initials"></p>
+          </div>
+          <div class="score-container">
+            <p id="score-label">Score:</p>
+            <p id="hs-score"></p>
+          </div>
+        </div>
         <button class="try-again" type="button">Try Again</button>
       </div>
     </div>

@@ -164,7 +164,7 @@ initialsSubmit.addEventListener('click', function(event) {
     event.preventDefault();
 
     var initialsEntered = document.querySelector("#initials-entered").value;
-    var score = document.querySelector("#final-score").value;
+    var score = finalScore.innerHTML;
 
     if (initialsEntered === '') {
         alert("Initials cannot be blank");
